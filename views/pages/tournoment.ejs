@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+        <link rel="stylesheet" href="../../public/css/tournment.css">
+</head>
+
+<div class="nav_slider">
+    <div class="nav_slider_one">
+        <div class="nav_slider_one_main">
+            <img style="border-radius: 50%;" src="../../public/images/logos.jpg" alt="Girl in a jacket" width="60"
+                height="60">
+            <h1 class="nav_slider_one_main_head">Lions Tech</h1>
+        </div>
+        <a href="/v1/tournament/tournamentview">
+            <h3 class="nav_slider_one_main_list">Tournament</h3>
+        </a>
+
+        <h3 class="nav_slider_one_main_list">Events</h3>
+        <h3 class="nav_slider_one_main_list">Communities</h3>
+        <input class="nav_slider_one_main_inp" type="text" placeholder="Search!!">
+
+    </div>
+
+    <div class="nav_slider_two">
+        <a href="/v1/user/changeuser">
+            <h3 class="nav_slider_one_main_list">Modify Account</h3>
+        </a>
+        <div>
+            <a href="/v1/user/logout">
+                <button class="nav_signup_btn">Logout</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="main_tournoment_sliders">
+    <div class="main_container_slider_div">
+        <h1 style="color: white;
+        font-family: 'Montserrat';
+        text-transform: capitalize;">Your tournaments</h1>
+        <a href="/v1/tournament/createTournament">
+            <button style="background-color: #ff7324;
+            border-color: #ff7324;
+            color: white;
+            padding: 15px 99px;
+            border: none;
+            border-radius: 5px;
+            font-family: monospace;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 900">Create Tournaments</button>
+        </a>
+        <a href="/v1/opposition/startTournament">
+            <button style="background-color: #ff7324;
+            border-color: #ff7324;
+            color: white;
+            padding: 15px 99px;
+            border: none;
+            border-radius: 5px;
+            font-family: monospace;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 900">Start Tournaments</button>
+        </a>
+
+
+    </div>
+
+</div>
+
+<div class="main_container_slider_box">
+    <div class="main_container_slider_box_one">
+        <% for(let count=0; count < tournoments.length; count++) { %>
+            <div style="
+            display: flex;
+    justify-content: space-between;
+    align-items: center;">
+                <div>
+                    <h3 style="    color: white;
+                text-transform: capitalize;
+                font-size: 29px;
+                margin-bottom: 0;">
+                        <%= tournoments[count].name %>
+                    </h3>
+                    <p style="color: white;">
+                        <%= tournoments[count].description %>
+                    </p>
+                </div>
+
+                <h3 style="color: white;">
+                    <%= tournoments[count].status %>
+                </h3>
+                <% if(tournoments[count].status==="Active" ){ %>
+                    <a href="/v1/players/playerview/<%=tournoments[count]._id %>">
+                        <button style="    background-color: #ff7324;
+                        border-color: #ff7324;
+                        color: white;
+                        padding: 13px 13px;
+                        border: none;
+                        border-radius: 5px;
+                        font-family: monospace;
+                        cursor: pointer;
+                        font-size: 18px;
+                        font-weight: 900;">Create Players</button>
+                    </a>
+                    <a href="/v1/players/playerdisplay/<%=tournoments[count]._id %>">
+                        <button style="    background-color: #ff7324;
+                        border-color: #ff7324;
+                        color: white;
+                        padding: 13px 13px;
+                        border: none;
+                        border-radius: 5px;
+                        font-family: monospace;
+                        cursor: pointer;
+                        font-size: 18px;
+                        font-weight: 900;" class="tournment_button">See List of players</button>
+                    </a>
+                    <% } else { %>
+                        <p style="color: white;">
+                            <%= tournoments[count].created_at %>
+                        </p>
+
+                        <% } %>
+
+
+            </div>
+            <hr />
+            <% } %>
+    </div>
+</div>

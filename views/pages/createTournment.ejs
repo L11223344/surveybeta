@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+        <link rel="stylesheet" href="../../public/css/tournment.css">
+</head>
+
+
+
+<main>
+    <div class="nav_slider">
+        <div class="nav_slider_one">
+            <div class="nav_slider_one_main">
+                <img style="border-radius: 50%;" src="../../public/images/logos.jpg" alt="Girl in a jacket" width="60"
+                    height="60">
+                <h1 class="nav_slider_one_main_head">Lions Tech</h1>
+            </div>
+            <a href="/v1/tournament/tournamentview">
+                <h3 class="nav_slider_one_main_list">Tournament</h3>
+            </a>
+
+            <h3 class="nav_slider_one_main_list">Events</h3>
+            <h3 class="nav_slider_one_main_list">Communities</h3>
+            <input class="nav_slider_one_main_inp" type="text" placeholder="Search!!">
+
+        </div>
+
+        <div class="nav_slider_two">
+            <h3 class="nav_slider_one_main_list">Organize</h3>
+            <div>
+                <a href="/v1/user/logout">
+                    <button class="nav_signup_btn">Logout</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="create_tournment_slider">
+        <div class="create_tournoment_container">
+            <h1 class="tournment_container_heading">New tournament</h1>
+        </div>
+    </div>
+
+    <div class="create_tournament_main_slider">
+        <div class="create_tournament_main">
+            <h2 style="font-size: 19px;
+            color: white;
+            margin-left: 21px;
+            margin-top: 20px;
+            font-family: monospace;">BASIC INFO</h2>
+        </div>
+        <div class="create_tournament_main_inp_head">
+            <form action="/v1/tournament/create" method="POST">
+                <div style="display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 51px;">
+                    <label style="font-size: 21px;
+                    color: white;">Tournament name</label>
+                    <input style=" margin-bottom: 10px;
+                display: block;
+                background-color: #6b6c72;
+            outline: none;
+            color: white;
+            border: none;
+            width: 66%;
+            padding: 13px 2px;
+                margin-top: 3px
+            ;" name="name" style="margin-bottom:10px" type="text" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" value="" placeholder="name" required>
+                </div>
+                <div style="display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 51px;">
+                    <label style="font-size: 21px;
+                    color: white;">Description</label>
+                    <input style=" margin-bottom: 10px;
+                display: block;
+                background-color: #6b6c72;
+            outline: none;
+            color: white;
+            border: none;
+            width: 66%;
+            padding: 13px 2px;
+                margin-top: 3px
+            ;" name="description" style="margin-bottom:10px" type="text" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" value="" placeholder="description">
+                </div>
+                <div style="margin-top: 44px;">
+                    <button class="created_tournoment_btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</main>

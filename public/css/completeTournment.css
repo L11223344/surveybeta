@@ -1,0 +1,15 @@
+.completed_image_slider_main_image{
+    height: 200px;
+    width: 100%;
+}
+.completed_user_content{
+    background-color: #2b303d;
+    border: 1px solid #23252d;
+    height: 200px;
+}
+.completed_user_content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding-top: 78px; */
+}

@@ -1,0 +1,65 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.nav_slider{
+    background-color: #2b303d;
+    border: 1px solid #23252d;
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 26px;
+}
+.nav_slider_one{
+    width: 67%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_slider_one_main{
+    display: flex;
+    border: 1px solid;
+    align-items: center;
+    justify-content: space-between;
+    width: 23%;
+}
+.nav_slider_two{
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    width: 19%;
+    justify-content: space-between;
+}
+.nav_slider_one_main_head{
+font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 27px;
+    color: white;
+    font-size: 25px;
+}
+.nav_slider_one_main_list{
+    color: white;
+    font-weight: 800;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav_slider_one_main_inp{
+    outline: none;
+    padding: 8px 45px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+}
+.nav_signup_btn{
+    padding: 9px 2rem;
+    background-color: #ff7324;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: 800;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}

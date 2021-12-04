@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="../../public/css/signup.css">
+
+<div class="signup_slider">
+    <div class="signup_slider_image">
+        <div class="signup_slider_alpha">
+            <div class="signup_slider_main_img">
+                <img style="border-radius: 50%;" src="../../public/images/logos.jpg" height="60" width="60">
+            </div>
+            <div class="signup_slider_heading_content">
+                <h4 class="signup_slider_heading_para">Join the millions who trust Challonge to
+                    manage their tournaments. More than 11,448,459 brackets created.</h4>
+            </div>
+        </div>
+    </div>
+    <div class='signup_slider_content'>
+        <div class="signup_slider_content_nav">
+            <p style="color: white;">Already have an account?</p>
+            <a href="/v1/user/loginview">
+                <button class="signup_slider_content_nav_btn">Login</button>
+            </a>
+
+        </div>
+        <div class="signup_body_container">
+            <div class="signup_body_head">
+                <h2 class="signup_body_heading">Sign up for Challange !!</h2>
+                <p style="color: darkgray;letter-spacing: 3px;">Get started easily by signing up to manage your
+                    tournaments and events!</p>
+            </div>
+            <p style="text-align: center;
+            color: white;
+            font-size: 20px;
+            margin-top: 42px;">Sign up with</p>
+            <div class="signup_body_social_btn">
+                <button class="signup_body_social_facebook">Facebook</button>
+                <button class="signup_body_social_facebook">Gmail</button>
+            </div>
+            <hr />
+
+            <div class="signup_input">
+                <form action="/v1/user/register" method="POST">
+                    <input style="margin-bottom: 10px;
+                    background-color: #6b6c72;
+                   outline: none;
+                   color: white;
+                   border: none;
+                   display: block;
+                   width: 100%;
+                   padding: 7px;
+                   margin-top: 3px
+               ;" name="username" style="margin-bottom:10px" type="name" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" value="" placeholder="username" required>
+
+                    <input style=" margin-bottom: 10px;
+                       display: block;
+                       background-color: #6b6c72;
+                   outline: none;
+                   color: white;
+                   border: none;
+                       width: 100%;
+                       padding: 7px;
+                       margin-top: 3px
+                   ;" name="email" style="margin-bottom:10px" type="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" value="" placeholder="email" required>
+                    <input style=" margin-bottom: 10px;
+                       display: block;
+                       background-color: #6b6c72;
+                   outline: none;
+                   color: white;
+                   border: none;
+                       width: 100%;
+                       padding: 7px;
+                       margin-top: 3px
+                   ;" name="password" style="margin-bottom:10px" type="password" class="form-control"
+                        id="exampleInputEmail1" aria-describedby="emailHelp" value="" placeholder="Password" required>
+                    <input style="    margin-bottom: 10px;
+                       display: block;
+                       background-color: #6b6c72;
+                   outline: none;
+                   color: white;
+                   border: none;
+                       width: 100%;
+                       padding: 7px;
+                       margin-top: 3px
+                   ;" name="age" style="margin-bottom:10px" type="text" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" value="" placeholder="age" required>
+
+                    <input style="margin-bottom: 10px;
+                       display: block;
+                       background-color: #6b6c72;
+                   outline: none;
+                   color: white;
+                   border: none;
+                       width: 100%;
+                       padding: 7px;
+                       margin-top: 3px
+                   ;" name="country" style="margin-bottom:10px" type="text" class="form-control"
+                        id="exampleInputEmail1" aria-describedby="emailHelp" value="" placeholder="Country" required>
+                    <button class="signup_button_signup">Create an Account</button>
+
+
+
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

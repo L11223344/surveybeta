@@ -1,0 +1,103 @@
+<link rel="stylesheet" href="../../public/css/signup.css">
+
+<div class="signup_slider">
+    <div class="signup_slider_image">
+        <div class="signup_slider_alpha">
+            <div class="signup_slider_main_img">
+                <img style="border-radius: 50%;" src="../../public/images/logos.jpg" height="60" width="60">
+            </div>
+            <div class="signup_slider_heading_content">
+                <h4 class="signup_slider_heading_para">Join the millions who trust Challonge to
+                    manage their tournaments. More than 11,448,459 brackets created.</h4>
+            </div>
+        </div>
+    </div>
+    <div class='signup_slider_content'>
+        <div class="signup_slider_content_nav">
+            <p style="color: white;">Already have an account?</p>
+            <a href="/v1/user/loginview">
+                <button class="signup_slider_content_nav_btn">Login</button>
+            </a>
+
+        </div>
+        <div class="signup_body_container">
+            <div class="signup_body_head">
+                <h2 class="signup_body_heading">Update Your Profile !!</h2>
+            </div>
+            <form method="post">
+                <div class="signup_input">
+                    <% for(let count=0; count < user.length; count++) { %>
+                        <input style="margin-bottom: 10px;
+                    background-color: #6b6c72;
+                   outline: none;
+                   color: white;
+                   border: none;
+                   display: block;
+                   width: 100%;
+                   padding: 7px;
+                   margin-top: 3px
+               ;" name="name" style="margin-bottom:10px" type="name" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" value="<%= user[count].username %>" placeholder="username"
+                            required>
+
+                        <input style=" margin-bottom: 10px;
+                       display: block;
+                       background-color: #6b6c72;
+                   outline: none;
+                   color: white;
+                   border: none;
+                       width: 100%;
+                       padding: 7px;
+                       margin-top: 3px
+                   ;" name="email" style="margin-bottom:10px" type="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" value="<%= user[count].email %>" placeholder="email" required>
+                        <input style=" margin-bottom: 10px;
+                       display: block;
+                       background-color: #6b6c72;
+                   outline: none;
+                   color: white;
+                   border: none;
+                       width: 100%;
+                       padding: 7px;
+                       margin-top: 3px
+                   ;" name="password" style="margin-bottom:10px" type="password" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= user[count].password %>"
+                            placeholder="Password" required>
+                        <input style="    margin-bottom: 10px;
+                       display: block;
+                       background-color: #6b6c72;
+                   outline: none;
+                   color: white;
+                   border: none;
+                       width: 100%;
+                       padding: 7px;
+                       margin-top: 3px
+                   ;" name="age" style="margin-bottom:10px" type="text" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" value="<%= user[count].age %>" placeholder="age" required>
+
+                        <input style="margin-bottom: 10px;
+                       display: block;
+                       background-color: #6b6c72;
+                   outline: none;
+                   color: white;
+                   border: none;
+                       width: 100%;
+                       padding: 7px;
+                       margin-top: 3px
+                   ;" name="country" style="margin-bottom:10px" type="text" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= user[count].country %>"
+                            placeholder="Country" required>
+                        <a href="/v1/user/update/<%=user[count]._id %>">
+                            <button class="signup_button_signup">Update Account</button>
+                        </a>
+
+
+
+
+                        <% } %>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
