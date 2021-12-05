@@ -4,9 +4,13 @@ var UserSchema = new mongoose.Schema({
     username: String,
     email: String,
     password: String,
-    age: String,
+    age: {
+        type: String,
+        default: ""
+    },
     country: {
-        type: String
+        type: String,
+        default: ""
     },
     created_at: {
         type: Date,
