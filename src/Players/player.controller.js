@@ -33,6 +33,7 @@ const createPlayer = async (req, res) => {
     opponentArray.push(playerseven);
     opponentArray.push(playereight);
 
+
     if (opponentArray.length == 8) {
         oppositionArray = [];
 
@@ -75,7 +76,7 @@ const createPlayer = async (req, res) => {
     }
 
     const d = await Opposition.create({ name: oppositionArray });
-
+    console.log('d', d)
     const player = new Player(req.body);
     const data = await player.save();
     const playerId = data._id;

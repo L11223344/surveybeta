@@ -3,9 +3,9 @@ const Opposition = require('./opposition.model')
 
 const startedTournoments = async (req, res) => {
     const opposition = await Opposition.find({});
-
-
-    const Data = opposition[0].name;
+    const lastLength = opposition.length - 1
+    const Data = opposition[lastLength].name;
+    console.log('tttt', Data)
     res.render('pages/firstround.ejs', {
         Data
     })
