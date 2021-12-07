@@ -9,6 +9,15 @@ var PlayerSchema = new mongoose.Schema({
     playersix: String,
     playerseven: String,
     playereight: String,
+    playernine: String,
+    playerten: String,
+    playereleven: String,
+    playertwelve: String,
+    playerthirteen: String,
+    playerfourteen: String,
+    playerfifteen: String,
+    playersixteen: String,
+
     status: {
         type: String,
         default: ""

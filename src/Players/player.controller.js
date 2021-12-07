@@ -5,12 +5,125 @@ const Opposition = require('../Opposition/opposition.model')
 
 // View the player layout
 const playerView = (req, res) => {
-    const id = req.params.id
+    const body = req.body;
+    const id = req.params.id;
+
+    console.log('id', req.params.id)
     res.render('pages/createPlayers.ejs', {
-        id
+        id,
+        body
     })
 }
+// create 16 player
+const createSixteen = async (req, res) => {
+    console.log('sixteen is calling')
+    let oppositionArray = [];
+    const tournomentId = req.body.id;
+    const opponentArray = [];
+    const playerone = req.body.playerone;
+    const playertwo = req.body.playertwo;
+    const playerthree = req.body.playerthree;
+    const playerfour = req.body.playerfour;
+    const playerfive = req.body.playerfive;
+    const playersix = req.body.playersix;
+    const playerseven = req.body.playerseven;
+    const playereight = req.body.playereight;
+    const playernine = req.body.playernine;
+    const playerten = req.body.playerten;
+    const playereleven = req.body.playereleven;
+    const playertwelve = req.body.playertwelve;
+    const playerthirteen = req.body.playerthirteen;
+    const playerfourteen = req.body.playerforteen;
+    const playerfifteen = req.body.playerfifteen;
+    const playersixteen = req.body.playersixteen;
 
+    opponentArray.push(playerone);
+    opponentArray.push(playertwo);
+    opponentArray.push(playerthree);
+    opponentArray.push(playerfour);
+    opponentArray.push(playerfive);
+    opponentArray.push(playersix);
+    opponentArray.push(playerseven);
+    opponentArray.push(playereight);
+    opponentArray.push(playernine);
+    opponentArray.push(playerten);
+    opponentArray.push(playereleven);
+    opponentArray.push(playertwelve);
+    opponentArray.push(playerthirteen);
+    opponentArray.push(playerfourteen);
+    opponentArray.push(playerfifteen);
+    opponentArray.push(playersixteen);
+
+    const first = {
+        playerone,
+        playertwo
+    }
+    oppositionArray[0] = first;
+
+    const second = {
+        playerthree,
+        playerfour
+    }
+    oppositionArray[1] = second;
+
+
+    const third = {
+        playerfive,
+        playersix
+    }
+    oppositionArray[2] = third;
+
+    const four = {
+        playerseven,
+        playereight
+    }
+    oppositionArray[3] = four;
+
+    const five = {
+        playernine,
+        playerten
+    }
+    oppositionArray[4] = five;
+
+    const six = {
+        playereleven,
+        playertwelve
+    }
+    oppositionArray[5] = six;
+
+    const seven = {
+        playerthirteen,
+        playerfourteen
+    }
+    oppositionArray[6] = seven;
+
+    const eight = {
+        playerfifteen,
+        playersixteen
+    }
+    oppositionArray[7] = eight;
+
+
+    const d = await Opposition.create({ sixteen: oppositionArray });
+    const player = new Player(req.body);
+    const data = await player.save();
+    console.log('data', data)
+    const playerId = data._id;
+    const tournament = await Tournament.findById(tournomentId);
+    const tournamentData = {
+        name: tournament.name,
+        description: tournomentId.description
+    }
+    tournamentData.playerId = playerId;
+    const updateToronoment = await Tournament.findByIdAndUpdate(tournomentId, {
+        name: tournament.name,
+        description: tournomentId.description,
+        playerId: tournamentData.playerId
+    });
+
+    res.redirect('/v1/tournament/tournamentview')
+
+}
 // create a new Players
 const createPlayer = async (req, res) => {
     let oppositionArray;
@@ -32,6 +145,7 @@ const createPlayer = async (req, res) => {
     opponentArray.push(playersix);
     opponentArray.push(playerseven);
     opponentArray.push(playereight);
+
 
 
     if (opponentArray.length == 8) {
@@ -111,6 +225,7 @@ const displayPlayer = async (req, res) => {
 module.exports = {
     playerView,
     createPlayer,
-    displayPlayer
+    displayPlayer,
+    createSixteen
 
 }

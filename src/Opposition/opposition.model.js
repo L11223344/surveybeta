@@ -4,6 +4,9 @@ var OppositionSchema = new mongoose.Schema({
     name: {
         type: Array
     },
+    sixteen: {
+        type: Array
+    },
     status: {
         type: String,
         default: ""

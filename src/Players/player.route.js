@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { playerView, createPlayer, displayPlayer } = require('./player.controller')
+const { playerView, createPlayer, displayPlayer, createSixteen } = require('./player.controller')
 
 
-router.get('/playerview/:id', playerView);
+router.post('/playerview/:id', playerView);
 router.post('/create', createPlayer);
-router.get('/playerdisplay/:id', displayPlayer)
+router.get('/playerdisplay/:id', displayPlayer);
+router.post('/createsixteen', createSixteen)
 
 module.exports = router;

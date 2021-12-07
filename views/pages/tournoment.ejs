@@ -76,7 +76,7 @@
             <div style="
             display: flex;
     justify-content: space-between;
-    align-items: center;">
+    align-items: center">
                 <div>
                     <h3 style="    color: white;
                 text-transform: capitalize;
@@ -93,18 +93,27 @@
                     <%= tournoments[count].status %>
                 </h3>
                 <% if(tournoments[count].status==="Active" ){ %>
-                    <a href="/v1/players/playerview/<%=tournoments[count]._id %>">
-                        <button style="    background-color: #ff7324;
-                        border-color: #ff7324;
-                        color: white;
-                        padding: 13px 13px;
-                        border: none;
-                        border-radius: 5px;
-                        font-family: monospace;
-                        cursor: pointer;
-                        font-size: 18px;
-                        font-weight: 900;">Create Players</button>
-                    </a>
+                    <form action="/v1/players/playerview/<%=tournoments[count]._id %>" method="post">
+                        <select name="playereight" style="padding: 10px 24px;">
+                            <option value="playereight">
+                                8 Player
+                            </option>
+                            <option value="playersixteen">
+                                16 Player
+                            </option>
+                        </select>
+                        <button style="background-color: #ff7324;
+                            border-color: #ff7324;
+                            color: white;
+                            padding: 13px 13px;
+                            border: none;
+                            border-radius: 5px;
+                            font-family: monospace;
+                            cursor: pointer;
+                            font-size: 18px;
+                            font-weight: 900;">Create Players</button>
+                    </form>
+
                     <a href="/v1/players/playerdisplay/<%=tournoments[count]._id %>">
                         <button style="    background-color: #ff7324;
                         border-color: #ff7324;
