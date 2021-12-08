@@ -33,7 +33,7 @@ const createSixteen = async (req, res) => {
     const playereleven = req.body.playereleven;
     const playertwelve = req.body.playertwelve;
     const playerthirteen = req.body.playerthirteen;
-    const playerfourteen = req.body.playerforteen;
+    const playerfourteen = req.body.playerfourteen;
     const playerfifteen = req.body.playerfifteen;
     const playersixteen = req.body.playersixteen;
 
@@ -215,12 +215,36 @@ const createPlayer = async (req, res) => {
 const displayPlayer = async (req, res) => {
     const players = []
     const player = await Tournament.findById(req.params.id).populate('playerId');
-    players.push(player)
-    res.render('pages/playerDisplay.ejs', {
-        players
+    const total = JSON.stringify(player.playerId);
+    const d = Object.keys(total).length;
+    console.log('dddd', d)
+
+    if (d < 300) {
+        const status = true;
+        players.push(player);
+        console.log('players', players);
+        console.log('status', status)
+        res.render('pages/playerDisplay.ejs', {
+            players,
+            status
+        }
+
+        )
+    }
+    else {
+        const status = false;
+        console.log('iam else')
+        players.push(player);
+        console.log('players', players);
+        console.log('status', status)
+        res.render('pages/playerDisplay.ejs', {
+            players,
+            status
+        }
+
+        )
     }
 
-    )
 }
 module.exports = {
     playerView,

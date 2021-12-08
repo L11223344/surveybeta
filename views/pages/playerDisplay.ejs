@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head'); %>
-        <link rel="stylesheet" href="../../public/css/tournment.css">
+        <%- include('../partials/head'); %>
+                <link rel="stylesheet" href="../../public/css/tournment.css">
 </head>
 
 
@@ -11,38 +11,39 @@
 <main>
 
 
-    <div class="create_tournment_slider">
-        <div class="create_tournoment_container">
-            <h1 style="color: black;font-family: fangsong;">List of Players</h1>
+        <div class="create_tournment_slider">
+                <div class="create_tournoment_container">
+                        <h1 style="color: black;font-family: fangsong;">List of Players</h1>
+                </div>
         </div>
-    </div>
 
-    <div style="background-color: #23252d;
+        <div style="background-color: #23252d;
     border: 1px solid #23252d;height:1100px">
-        <div class="create_tournament_main">
-            <h2 style="font-size: 19px;
+                <div class="create_tournament_main">
+                        <h2 style="font-size: 19px;
             color: white;
             margin-left: 21px;
             margin-top: 20px;
             font-family: monospace;">Player Names</h2>
-        </div>
-        <div style="max-width: 782px;
+                </div>
+                <div style="max-width: 782px;
         background-color: #2b303d;
         border: 1px solid #23252d;
         margin: auto;">
 
 
+                        <% if(status==true ){ %>
 
 
-            <form action="/v1/players/create" method="POST">
-                <% for(let count=0; count < players.length; count++) { %>
-                    <div style="display: flex;
+                                <form action="/v1/players/create" method="POST">
+                                        <% for(let count=0; count < players.length; count++) { %>
+                                                <div style="display: flex;
                 justify-content: space-around;
                 align-items: center;
                 margin-top: 51px;">
-                        <label style="font-size: 21px;
+                                                        <label style="font-size: 21px;
                     color: white;">Player 1</label>
-                        <input style=" margin-bottom: 10px;
+                                                        <input style=" margin-bottom: 10px;
                 display: block;
                 background-color: #6b6c72;
             outline: none;
@@ -52,18 +53,19 @@
             padding: 13px 2px;
                 margin-top: 3px
             ;" name="playerone" disabled style="margin-bottom:10px" type="text" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<%=players[count].playerId.playerone %>" placeholder="playerone" required>
-                    </div>
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                value="<%=players[count].playerId.playerone %>"
+                                                                placeholder="playerone" required>
+                                                </div>
 
 
-                    <div style="display: flex;
+                                                <div style="display: flex;
                 justify-content: space-around;
                 align-items: center;
                 margin-top: 51px;">
-                        <label style="font-size: 21px;
+                                                        <label style="font-size: 21px;
                     color: white;">Player 2</label>
-                        <input style=" margin-bottom: 10px;
+                                                        <input style=" margin-bottom: 10px;
                     display: block;
                     background-color: #6b6c72;
                 outline: none;
@@ -73,17 +75,18 @@
                 padding: 13px 2px;
                     margin-top: 3px
                 ;" name="playertwo" disabled style="margin-bottom:10px" type="text" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<%=players[count].playerId.playertwo %>" placeholder="playertwo" required>
-                    </div>
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                value="<%=players[count].playerId.playertwo %>"
+                                                                placeholder="playertwo" required>
+                                                </div>
 
-                    <div style="display: flex;
+                                                <div style="display: flex;
                 justify-content: space-around;
                 align-items: center;
                 margin-top: 51px;">
-                        <label style="font-size: 21px;
+                                                        <label style="font-size: 21px;
                     color: white;">Player 3</label>
-                        <input style=" margin-bottom: 10px;
+                                                        <input style=" margin-bottom: 10px;
                     display: block;
                     background-color: #6b6c72;
                 outline: none;
@@ -93,17 +96,18 @@
                 padding: 13px 2px;
                     margin-top: 3px
                 ;" name="playerthree" disabled style="margin-bottom:10px" type="text" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<%=players[count].playerId.playerthree %>" placeholder="playerthree" required>
-                    </div>
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                value="<%=players[count].playerId.playerthree %>"
+                                                                placeholder="playerthree" required>
+                                                </div>
 
-                    <div style="display: flex;
+                                                <div style="display: flex;
                 justify-content: space-around;
                 align-items: center;
                 margin-top: 51px;">
-                        <label style="font-size: 21px;
+                                                        <label style="font-size: 21px;
                     color: white;">Player 4</label>
-                        <input style=" margin-bottom: 10px;
+                                                        <input style=" margin-bottom: 10px;
                     display: block;
                     background-color: #6b6c72;
                 outline: none;
@@ -113,17 +117,18 @@
                 padding: 13px 2px;
                     margin-top: 3px
                 ;" name="playerfour" disabled style="margin-bottom:10px" type="text" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<%=players[count].playerId.playerfour %>" placeholder="playerfour" required>
-                    </div>
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                value="<%=players[count].playerId.playerfour %>"
+                                                                placeholder="playerfour" required>
+                                                </div>
 
-                    <div style="display: flex;
+                                                <div style="display: flex;
                 justify-content: space-around;
                 align-items: center;
                 margin-top: 51px;">
-                        <label style="font-size: 21px;
+                                                        <label style="font-size: 21px;
                     color: white;">Player 5</label>
-                        <input style=" margin-bottom: 10px;
+                                                        <input style=" margin-bottom: 10px;
                     display: block;
                     background-color: #6b6c72;
                 outline: none;
@@ -133,17 +138,18 @@
                 padding: 13px 2px;
                     margin-top: 3px
                 ;" name="playerfive" disabled style="margin-bottom:10px" type="text" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<%=players[count].playerId.playerfive %>" placeholder="palyerfive" required>
-                    </div>
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                value="<%=players[count].playerId.playerfive %>"
+                                                                placeholder="palyerfive" required>
+                                                </div>
 
-                    <div style="display: flex;
+                                                <div style="display: flex;
                 justify-content: space-around;
                 align-items: center;
                 margin-top: 51px;">
-                        <label style="font-size: 21px;
+                                                        <label style="font-size: 21px;
                     color: white;">Player 6</label>
-                        <input style=" margin-bottom: 10px;
+                                                        <input style=" margin-bottom: 10px;
                     display: block;
                     background-color: #6b6c72;
                 outline: none;
@@ -153,17 +159,18 @@
                 padding: 13px 2px;
                     margin-top: 3px
                 ;" name="playersix" disabled style="margin-bottom:10px" type="text" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<%=players[count].playerId.playersix %>" placeholder="playersix" required>
-                    </div>
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                value="<%=players[count].playerId.playersix %>"
+                                                                placeholder="playersix" required>
+                                                </div>
 
-                    <div style="display: flex;
+                                                <div style="display: flex;
                 justify-content: space-around;
                 align-items: center;
                 margin-top: 51px;">
-                        <label style="font-size: 21px;
+                                                        <label style="font-size: 21px;
                     color: white;">Player 7</label>
-                        <input style=" margin-bottom: 10px;
+                                                        <input style=" margin-bottom: 10px;
                     display: block;
                     background-color: #6b6c72;
                 outline: none;
@@ -173,17 +180,18 @@
                 padding: 13px 2px;
                     margin-top: 3px
                 ;" name="playerseven" disabled style="margin-bottom:10px" type="text" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<%=players[count].playerId.playerseven %>" placeholder="playerseven" required>
-                    </div>
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                value="<%=players[count].playerId.playerseven %>"
+                                                                placeholder="playerseven" required>
+                                                </div>
 
-                    <div style="display: flex;
+                                                <div style="display: flex;
                 justify-content: space-around;
                 align-items: center;
                 margin-top: 51px;">
-                        <label style="font-size: 21px;
+                                                        <label style="font-size: 21px;
                     color: white;">Player 8</label>
-                        <input style=" margin-bottom: 10px;
+                                                        <input style=" margin-bottom: 10px;
                     display: block;
                     background-color: #6b6c72;
                 outline: none;
@@ -193,12 +201,392 @@
                 padding: 13px 2px;
                     margin-top: 3px
                 ;" name="playereight" disabled style="margin-bottom:10px" type="text" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<%=players[count].playerId.playereight %>" placeholder="playereight" required>
-                    </div>
-                    <% } %>
-            </form>
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                value="<%=players[count].playerId.playereight %>"
+                                                                placeholder="playereight" required>
+                                                </div>
+                                                <% } %>
+                                </form>
+                                <% } else { %>
+                                        <form action="/v1/players/create" method="POST">
+                                                <% for(let count=0; count < players.length; count++) { %>
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 1</label>
+                                                                <input style=" margin-bottom: 10px;
+                    display: block;
+                    background-color: #6b6c72;
+                outline: none;
+                color: white;
+                border: none;
+                width: 66%;
+                padding: 13px 2px;
+                    margin-top: 3px
+                ;" name="playerone" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playerone %>"
+                                                                        placeholder="playerone" required>
+                                                        </div>
+
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 2</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playertwo" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playertwo %>"
+                                                                        placeholder="playertwo" required>
+                                                        </div>
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 3</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playerthree" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playerthree %>"
+                                                                        placeholder="playerthree" required>
+                                                        </div>
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 4</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playerfour" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playerfour %>"
+                                                                        placeholder="playerfour" required>
+                                                        </div>
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 5</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playerfive" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playerfive %>"
+                                                                        placeholder="palyerfive" required>
+                                                        </div>
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 6</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playersix" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playersix %>"
+                                                                        placeholder="playersix" required>
+                                                        </div>
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 7</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playerseven" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playerseven %>"
+                                                                        placeholder="playerseven" required>
+                                                        </div>
+
+
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 8</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playereight" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playereight %>"
+                                                                        placeholder="playereight" required>
+                                                        </div>
+
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 9</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playernine" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playernine %>"
+                                                                        placeholder="playernine" required>
+                                                        </div>
+
+
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 10</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playerten" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playerten %>"
+                                                                        placeholder="playerten" required>
+                                                        </div>
+
+
+
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 11</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playereleven" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playereleven %>"
+                                                                        placeholder="playereleven" required>
+                                                        </div>
+
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 12</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playertwelve" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playertwelve %>"
+                                                                        placeholder="playertwelve" required>
+                                                        </div>
+
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 13</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playerthirteen" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playerthirteen %>"
+                                                                        placeholder="playerthirteen" required>
+                                                        </div>
+
+
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 14</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playereight" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playerfourteen %>"
+                                                                        placeholder="playereight" required>
+                                                        </div>
+
+
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 15</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playerfifteen" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playerfifteen %>"
+                                                                        placeholder="playereight" required>
+                                                        </div>
+
+
+
+
+                                                        <div style="display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 51px;">
+                                                                <label style="font-size: 21px;
+                        color: white;">Player 16</label>
+                                                                <input style=" margin-bottom: 10px;
+                        display: block;
+                        background-color: #6b6c72;
+                    outline: none;
+                    color: white;
+                    border: none;
+                    width: 66%;
+                    padding: 13px 2px;
+                        margin-top: 3px
+                    ;" name="playersixteen" disabled style="margin-bottom:10px" type="text" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        aria-describedby="emailHelp"
+                                                                        value="<%=players[count].playerId.playersixteen %>"
+                                                                        placeholder="playersixteen" required>
+                                                        </div>
+                                                        <% } %>
+                                        </form>
+
+
+                                        <% } %>
+
+
+                </div>
         </div>
-    </div>
 
 </main>
