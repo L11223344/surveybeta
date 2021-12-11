@@ -5,22 +5,22 @@ body{
     padding: 0;
 }
 .nav_slider{
-    background-color: #2b303d;
-    border: 1px solid #23252d;
+    background-color: #000000;
+ 
     display: flex;
     justify-content: space-between;
     padding: 1px 26px;
 }
 .nav_slider_one{
     width: 67%;
-    border: 1px solid;
+  
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .nav_slider_one_main{
     display: flex;
-    border: 1px solid;
+  
     align-items: center;
     justify-content: space-between;
     width: 23%;
@@ -32,12 +32,19 @@ body{
     width: 19%;
     justify-content: space-between;
 }
+.bracket_container{
+    border: 1px solid #322c2c;
+    height: 500px;
+    max-width: 401px;
+    margin: initial;
+    padding-left: 79px;
+}
 .nav_slider_one_main_head{
 font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 27px;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
 }
 .nav_slider_one_main_list{
     color: white;
@@ -54,7 +61,7 @@ font-family: 'Montserrat', sans-serif;
 }
 .nav_signup_btn{
     padding: 9px 2rem;
-    background-color: #ff7324;
+    background-color: #3961d3;
     cursor: pointer;
     border: none;
     color: white;
@@ -63,3 +70,108 @@ font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-family: 'Montserrat', sans-serif;
 }
+.nav_logout_btn{
+    padding: 9px 2rem;
+    background-color: #df1d1d;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: 800;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+.modify_button{
+    padding: 9px 2rem;
+    background-color: #df1d1d;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: 800;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif; 
+}
+table, td, th {
+    border: 1px solid white;
+    color: white;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .slider_main{
+    border: 1px solid #cfcfcf;
+    max-width: 908px;
+    margin: auto;
+    margin-top: 67px;
+    background-color: #f1f1f1;
+    box-shadow: 1px 0px 3px 0px;
+
+  }
+  .slider_main_heading{
+    font-family: cursive;
+    font-size: 32px;
+    text-align: center;
+  }
+
+
+
+
+  .survey_slider{
+    border: 1px solid black;
+  
+    max-width: 983px;
+    margin: auto;
+    margin-top: 102px;
+  }
+
+
+  .survey_slider_head{
+      text-align: center;
+  }
+  .survey_slider_heading{
+    font-family: fangsong;
+    letter-spacing: 3px;
+    font-size: 33px;
+    margin-bottom: 9px;
+  }
+
+  .survey_contents{
+    max-width: 453px;
+    margin: auto;
+    margin-top: 37px;
+    border: 1px solid;
+    height: 500px;
+
+  }
+
+
+  .question_one{
+
+    display: flex;
+    width: 60%;
+  
+    justify-content: space-around;
+
+  }
+
+
+
+  .inp{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 96%;
+  }
+  .corona_btn{
+    padding: 9px 23px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #5656ff;
+    border: none;
+    color: white;
+    border-radius: 6px;
+  }

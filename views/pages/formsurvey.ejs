@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<header>
+
+    <%- include('../partials/header',{success:success}); %>
+</header>
+
+<body>
+    <div style="    float: right;
+    margin-top: 13px;
+    margin-right: 19px;">
+        <a href="/v1/user/changeuser">
+            <button class="modify_button">Modify your account</button>
+        </a>
+
+        <a href="/v1/user/surveys">
+            <button class="modify_button">Form Survey</button>
+        </a>
+
+    </div>
+
+    <div class="survey_slider">
+        <div class="survey_slider_head">
+            <h2 class="survey_slider_heading">Create a Survey</h2>
+            <hr style="    width: 30%;
+            margin-top: 0;
+            border: 3px solid currentColor;
+            border-radius: 110px;" />
+        </div>
+
+        <div class="survey_contents">
+
+            <!-- question one -->
+            <div style="display: flex;
+            align-items: center;">
+                <span>1).</span>
+                <h3 style="    font-family: 'Montserrat';">What is your Age?</h3>
+            </div>
+            <div>
+                <input class="inp" type="text" id="name" name="name" placeholder="Answer...">
+            </div>
+
+
+            <!-- question two -->
+            <div style="display: flex;
+              align-items: center;">
+                <span>2).</span>
+                <h3 style="    font-family: 'Montserrat';">What is your Sex?</h3>
+            </div>
+            <div>
+                <input class="inp" type="text" id="name" name="name" placeholder="Answer...">
+            </div>
+
+
+            <!-- question one -->
+            <div style="display: flex;
+              align-items: center;">
+                <span>3).</span>
+                <h3 style="    font-family: 'Montserrat';">What is your County of residence?</h3>
+            </div>
+            <div>
+                <input class="inp" type="text" id="name" name="name" placeholder="Answer...">
+            </div>
+
+
+            <!-- question one -->
+            <div style="display: flex;
+                align-items: center;">
+                <span>4).</span>
+                <h3 style="    font-family: 'Montserrat';">Which of these is your main source of information to stay
+                    informed about
+                    Covid-19?</h3>
+            </div>
+            <div>
+                <input class="inp" type="text" id="name" name="name" placeholder="Answer...">
+            </div>
+
+
+            <!-- question one -->
+            <div style="display: flex;
+                 align-items: center;">
+                <span>5).</span>
+                <h3 style="    font-family: 'Montserrat';">How is your Health in general?</h3>
+            </div>
+            <div>
+                <input class="inp" type="text" id="name" name="name" placeholder="Answer...">
+            </div>
+            <div style="    margin-top: 22px;">
+                <button class="corona_btn">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

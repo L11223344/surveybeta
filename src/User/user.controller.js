@@ -10,19 +10,23 @@ const viewSignup = (req, res) => {
 const createUser = async (req, res) => {
     const user = new User(req.body);
     const r = await user.save();
-    res.render('pages/login.ejs')
+    res.render('pages/login.ejs', {
+        message: false
+    })
 
 }
 
 // Here a user login with its email and password
 const userLogin = async (req, res) => {
-
+    console.log('reqqqqqq', req.body)
     const userExists = await User.find({
         email: req.body.email,
         password: req.body.password
     });
     if (userExists.length == 0) {
-        res.redirect('/v1/user/loginview')
+        res.render('pages/login.ejs', {
+            message: "invalid credentials"
+        })
 
     } else {
 
@@ -30,14 +34,18 @@ const userLogin = async (req, res) => {
         let requestPass = userExists[0].password;
         var token = jwt.sign({ foo: requestEmail }, 'test');
         res.cookie('auth', token);
-        res.render('pages/tournamentView.ejs')
+        res.render('pages/survey.ejs', {
+            success: true
+        })
     }
 
 }
 
 
 const viewLogin = async (req, res) => {
-    res.render('pages/login')
+    res.render('pages/login', {
+        message: false
+    })
 }
 
 const userLogout = (req, res) => {
@@ -49,6 +57,7 @@ const changeUser = (req, res) => {
     var token = req.headers.cookie;
     const tokens = queryString.parse(token)
     const auth_token = tokens.auth;
+
     if (auth_token) {
         jwt.verify(auth_token, 'test', async (err, token_data) => {
             if (err) {
@@ -103,6 +112,14 @@ const updateUser = async (req, res) => {
 
 }
 
+
+const formSurvey = (req, res) => {
+    console.log('am running')
+    res.render('pages/formsurvey.ejs', {
+        success: true
+    })
+}
+
 module.exports = {
     createUser,
     userLogin,
@@ -110,5 +127,6 @@ module.exports = {
     viewLogin,
     userLogout,
     changeUser,
-    updateUser
+    updateUser,
+    formSurvey
 }

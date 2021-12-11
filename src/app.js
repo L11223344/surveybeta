@@ -17,7 +17,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public/', express.static('./public'));
 // use res.render to load up an ejs view file
 app.get('/', (req, res) => {
-    res.render('pages/index')
+    res.render('pages/index',
+        {
+            success: false
+        }
+    )
 })
 app.use('/v1', routes)
 

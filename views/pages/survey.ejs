@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<header>
+
+    <%- include('../partials/header',{success:success}); %>
+</header>
+
+<body>
+    <div style="    float: right;
+    margin-top: 13px;
+    margin-right: 19px;">
+        <a href="/v1/user/changeuser">
+            <button class="modify_button">Modify your account</button>
+        </a>
+
+        <a href="/v1/user/surveys">
+            <button class="modify_button">Form Survey</button>
+        </a>
+
+    </div>
+
+    <div class="survey_slider">
+        <div class="survey_slider_head">
+            <h2 class="survey_slider_heading">Create a Survey</h2>
+            <hr style="    width: 30%;
+            margin-top: 0;
+            border: 3px solid currentColor;
+            border-radius: 110px;" />
+        </div>
+
+        <div class="survey_contents">
+            <div class="question_one">
+                <h4>1.</h4>
+                <h4>Do you have a fever?</h4>
+            </div>
+            <form style="margin-left: 42px;" action="" method="post">
+                <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                <input type="checkbox" name="favorite2" value="vanilla" /> No
+
+            </form>
+
+
+            <!-- question 2 -->
+            <div style="display: flex;
+            width: 90%;
+            justify-content: space-around;">
+                <h4>2.</h4>
+                <h4>Do you have any signs and symptoms?</h4>
+            </div>
+            <form style="margin-left: 42px;" action="" method="post">
+                <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                <input type="checkbox" name="favorite2" value="vanilla" /> No
+
+            </form>
+
+
+            <!-- question 3 -->
+            <div style="display: flex;
+                width: 95%;
+            justify-content: space-around;">
+                <h4>3.</h4>
+                <h4>Have you travelled or have close contact with <br /> anyone during covid?</h4>
+            </div>
+            <form style="margin-left: 42px;" action="" method="post">
+                <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                <input type="checkbox" name="favorite2" value="vanilla" /> No
+
+            </form>
+
+            <!-- question 4 -->
+            <div style="    display: flex;
+            width: 85%;
+            justify-content: space-around;">
+                <h4>4.</h4>
+                <h4>Have you travelled in past 14 days?</h4>
+            </div>
+            <form style="margin-left: 42px;" action="" method="post">
+                <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                <input type="checkbox" name="favorite2" value="vanilla" /> No
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
