@@ -26,6 +26,11 @@
     <div class="survey_slider">
         <div class="survey_slider_head">
             <h2 class="survey_slider_heading">Create a Survey</h2>
+            <select style="float: right;" name="survey">
+                <option value="none" selected>Active</option>
+                <option value="male">Expires in 1 Day</option>
+
+            </select>
             <hr style="    width: 30%;
             margin-top: 0;
             border: 3px solid currentColor;
@@ -33,55 +38,60 @@
         </div>
 
         <div class="survey_contents">
-            <div class="question_one">
-                <h4>1.</h4>
-                <h4>Do you have a fever?</h4>
-            </div>
-            <form style="margin-left: 42px;" action="" method="post">
-                <input type="checkbox" name="favorite1" value="chocolate" /> Yes
-                <input type="checkbox" name="favorite2" value="vanilla" /> No
+            <form action="/v1/surveycreate" method="post">
+                <div class="question_one">
+                    <h4>1.</h4>
+                    <h4>Do you have a fever?</h4>
+                </div>
+                <form style="margin-left: 42px;" action="" method="post">
+                    <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                    <input type="checkbox" name="favorite2" value="vanilla" /> No
 
-            </form>
+                </form>
 
 
-            <!-- question 2 -->
-            <div style="display: flex;
+                <!-- question 2 -->
+                <div style="display: flex;
             width: 90%;
             justify-content: space-around;">
-                <h4>2.</h4>
-                <h4>Do you have any signs and symptoms?</h4>
-            </div>
-            <form style="margin-left: 42px;" action="" method="post">
-                <input type="checkbox" name="favorite1" value="chocolate" /> Yes
-                <input type="checkbox" name="favorite2" value="vanilla" /> No
+                    <h4>2.</h4>
+                    <h4>Do you have any signs and symptoms?</h4>
+                </div>
+                <form style="margin-left: 42px;" action="" method="post">
+                    <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                    <input type="checkbox" name="favorite2" value="vanilla" /> No
 
-            </form>
+                </form>
 
 
-            <!-- question 3 -->
-            <div style="display: flex;
+                <!-- question 3 -->
+                <div style="display: flex;
                 width: 95%;
             justify-content: space-around;">
-                <h4>3.</h4>
-                <h4>Have you travelled or have close contact with <br /> anyone during covid?</h4>
-            </div>
-            <form style="margin-left: 42px;" action="" method="post">
-                <input type="checkbox" name="favorite1" value="chocolate" /> Yes
-                <input type="checkbox" name="favorite2" value="vanilla" /> No
+                    <h4>3.</h4>
+                    <h4>Have you travelled or have close contact with <br /> anyone during covid?</h4>
+                </div>
+                <form style="margin-left: 42px;" action="" method="post">
+                    <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                    <input type="checkbox" name="favorite2" value="vanilla" /> No
 
-            </form>
+                </form>
 
-            <!-- question 4 -->
-            <div style="    display: flex;
+                <!-- question 4 -->
+                <div style="    display: flex;
             width: 85%;
             justify-content: space-around;">
-                <h4>4.</h4>
-                <h4>Have you travelled in past 14 days?</h4>
-            </div>
-            <form style="margin-left: 42px;" action="" method="post">
-                <input type="checkbox" name="favorite1" value="chocolate" /> Yes
-                <input type="checkbox" name="favorite2" value="vanilla" /> No
+                    <h4>4.</h4>
+                    <h4>Have you travelled in past 14 days?</h4>
+                </div>
+                <form style="margin-left: 42px;" action="" method="post">
+                    <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                    <input type="checkbox" name="favorite2" value="vanilla" /> No
 
+                </form>
+                <div style="margin-top: 31px;">
+                    <button class="survey_btn">Create a Survey</button>
+                </div>
             </form>
         </div>
     </div>

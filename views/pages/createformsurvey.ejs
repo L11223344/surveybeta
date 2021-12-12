@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<header>
+
+    <%- include('../partials/header',{success:success}); %>
+</header>
+
+<body>
+    <div class="createsurveyslider">
+        <a href="/v1/survey/viewquestion">
+            <h3 style="float: right; cursor: pointer;"> Back to Survey</h3>
+        </a>
+        <h2 style="    text-align: center;
+        font-family: 'Montserrat';
+        letter-spacing: 3px;
+        word-spacing: 16px;
+        font-size: 23px;
+        margin-top: 36px;">Create a Survey Questions</h2>
+    </div>
+    <div class="createslider_main">
+
+
+        <!-- question 1 -->
+
+        <!-- question 1 -->
+
+        <div class="create_questionone">
+            <span>1.)</span>
+            <input class="survey_inps" type="text" id="name" name="name" placeholder="Create a question?">
+            <div style="
+                margin-top: 11px;
+                margin-left: 21px;
+            ">
+                <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                <input type="checkbox" name="favorite2" value="vanilla" /> No
+            </div>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

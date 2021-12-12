@@ -34,7 +34,7 @@ const userLogin = async (req, res) => {
         let requestPass = userExists[0].password;
         var token = jwt.sign({ foo: requestEmail }, 'test');
         res.cookie('auth', token);
-        res.render('pages/survey.ejs', {
+        res.render('pages/surveys.ejs', {
             success: true
         })
     }

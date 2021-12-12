@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<header>
+
+    <%- include('../partials/header',{success:success}); %>
+</header>
+
+
+<body>
+    <div class="list_slider">
+        <h2 style="text-align: center;    text-align: center;
+        font-family: monospace;
+        font-size: 27px;">Lists of All surveys</h2>
+
+        <table class="styled-table">
+
+            <thead>
+                <tr>
+                    <th>Survey Name</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% surveys.forEach(function(survey) { %>
+                    <tr>
+                        <td>
+                            <%= survey.surveyname %>
+                        </td>
+                        <td>
+                            <%= survey.surveytime %>
+                        </td>
+                        <td>
+                            <a href="/v1/survey/specificsurvey/<%=survey._id%>">
+                                <button style="
+                            padding: 6px 21px;
+                            background-color: #4040db;
+                            border: none;
+                            border-radius: 8px;
+                            color: white;
+                            cursor: pointer;
+                        ">See the Survey</button>
+                            </a>
+                        </td>
+                    </tr>
+                    <% }); %>
+                        <!-- and so on... -->
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>

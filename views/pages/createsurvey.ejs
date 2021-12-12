@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<header>
+
+    <%- include('../partials/header',{success:success}); %>
+</header>
+
+<body>
+    <div class="createsurveyslider">
+        <form action="/v1/survey/create" method="post">
+            <span>
+                <select name='inptype' id="selectBox" onclick="changeFunc()" class=" select_style" name="survey">
+                    <option value="short">Short Question and Answers</option>
+                    <option value="check">Checkbox</option>
+                </select>
+            </span>
+            <select name="surveytime" style="float: right;">
+                <option value="active">Active</option>
+                <option value="expire">Expire in 24 Hours</option>
+            </select>
+            <h2 style="    text-align: center;
+        font-family: 'Montserrat';
+        letter-spacing: 3px;
+        word-spacing: 16px;
+        font-size: 23px;
+        margin-top: 36px;">Create a Survey Questions</h2>
+            <div style="text-align: center;
+            text-align: center;
+            margin-top: 38px;
+            font-size: 22px;
+        ">
+                <label>Survey Name</label>
+                <input style="border: none;
+                border-bottom: 2px solid black;
+                width: 26%;
+                outline: none;" type="text" id="name" name="surveyname" placeholder="Create a Survey Name">
+            </div>
+            <div class="createslider_main">
+                <!-- question 1 -->
+
+                <div class="create_questionone">
+                    <div style="display: flex; align-items: center;">
+                        <span>1.)</span>
+                        <input class="survey_inps" type="text" id="name" name="question"
+                            placeholder="Create a question?">
+
+                    </div>
+                    <div class="short" style="
+                margin-top: 11px;
+                margin-left: 21px;
+                display:none
+               
+            ">
+                        <span>Ans:</span>
+                        <input class="survey_inps" type="text" name="answer" value="" placeholder="Answers..." />
+                    </div>
+
+                    <div class="check" style="
+                margin-top: 11px;
+                margin-left: 21px;
+                display: none;
+               
+            ">
+                        <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                        <input type="checkbox" name="favorite2" value="vanilla" /> No
+                    </div>
+
+                </div>
+
+                <!-- question 2 -->
+
+
+                <div class="create_questionone">
+                    <div style="display: flex; align-items: center;">
+                        <span>2.)</span>
+                        <input class="survey_inps" type="text" id="name" name="question"
+                            placeholder="Create a question?">
+
+                    </div>
+                    <div class="short" style="
+                margin-top: 11px;
+                margin-left: 21px;
+                display:none
+               
+            ">
+                        <span>Ans:</span>
+                        <input class="survey_inps" type="text" name="answer" value="" placeholder="Answers..." />
+                    </div>
+
+                    <div class="check" style="
+                margin-top: 11px;
+                margin-left: 21px;
+                display: none;
+               
+            ">
+                        <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                        <input type="checkbox" name="favorite2" value="vanilla" /> No
+                    </div>
+
+                </div>
+
+
+                <!-- question 3 -->
+                <div class="create_questionone">
+                    <div style="display: flex; align-items: center;">
+                        <span>3.)</span>
+                        <input class="survey_inps" type="text" id="name" name="question"
+                            placeholder="Create a question?">
+
+                    </div>
+                    <div class="short" style="
+    margin-top: 11px;
+    margin-left: 21px;
+    display:none
+   
+">
+                        <span>Ans:</span>
+                        <input class="survey_inps" type="text" name="answer" value="" placeholder="Answers..." />
+                    </div>
+
+                    <div class="check" style="
+    margin-top: 11px;
+    margin-left: 21px;
+    display: none;
+   
+">
+                        <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                        <input type="checkbox" name="favorite2" value="vanilla" /> No
+                    </div>
+
+                </div>
+
+                <!-- question 4 -->
+                <div class="create_questionone">
+                    <div style="display: flex; align-items: center;">
+                        <span>4.)</span>
+                        <input class="survey_inps" type="text" id="name" name="question"
+                            placeholder="Create a question?">
+
+                    </div>
+                    <div class="short" style="
+    margin-top: 11px;
+    margin-left: 21px;
+    display:none
+   
+">
+                        <span>Ans:</span>
+                        <input class="survey_inps" type="text" name="answer" value="" placeholder="Answers..." />
+                    </div>
+
+                    <div class="check" style="
+    margin-top: 11px;
+    margin-left: 21px;
+    display: none;
+   
+">
+                        <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                        <input type="checkbox" name="favorite2" value="vanilla" /> No
+                    </div>
+
+                </div>
+
+                <!-- question 5 -->
+                <div class="create_questionone">
+                    <div style="display: flex; align-items: center;">
+                        <span>5.)</span>
+                        <input class="survey_inps" type="text" id="name" name="question"
+                            placeholder="Create a question?">
+
+                    </div>
+                    <div class="short" style="
+    margin-top: 11px;
+    margin-left: 21px;
+    display:none
+   
+">
+                        <span>Ans:</span>
+                        <input class="survey_inps" type="text" name="answer" value="" placeholder="Answers..." />
+                    </div>
+
+                    <div class="check" style="
+    margin-top: 11px;
+    margin-left: 21px;
+    display: none;
+   
+">
+                        <input type="checkbox" name="favorite1" value="chocolate" /> Yes
+                        <input type="checkbox" name="favorite2" value="vanilla" /> No
+                    </div>
+
+                </div>
+
+                <div style="    margin-top: 8px;
+            margin-bottom: 12px;">
+                    <button class="creating_survey">Create a Survey</button>
+                </div>
+
+            </div>
+
+    </div>
+
+    <script>
+        function changeFunc() {
+            var selectBox = document.getElementById("selectBox");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            console.log('ssss', selectedValue)
+            if (selectedValue == 'check') {
+                var short = document.querySelectorAll('.short');
+                var selectBox = document.querySelectorAll('.check');
+
+                selectBox.forEach((box) => {
+                    box.style.display = 'block'
+                })
+                short.forEach((box) => {
+                    box.style.display = 'none'
+                })
+            }
+            if (selectedValue == 'short') {
+                var selectBox = document.querySelectorAll('.check');
+                var short = document.querySelectorAll('.short');
+
+                short.forEach((box) => {
+                    box.style.display = 'block'
+                })
+                selectBox.forEach((box) => {
+                    box.style.display = 'none'
+                })
+            }
+
+
+        }
+    </script>
+</body>
+
+
+</html>

@@ -8,11 +8,13 @@
 
 
         <%=console.log('successxxx',success) %>
-
+            <a href="/v1/survey/list">
+                <button style="background-color: blue;" class="nav_logout_btn">Survey List</button>
+            </a>
     </div>
 
     <div class="nav_slider_two">
-        <h3 style="display: none;" class="nav_slider_one_main_list">Organize</h3>
+
         <% if(success==true){ %>
             <a href="/v1/user/logout">
                 <button class="nav_logout_btn">Logout</button>

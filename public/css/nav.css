@@ -166,6 +166,23 @@ table, td, th {
     outline: none;
     width: 96%;
   }
+  .survey_btn{
+    padding: 9px 23px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #5656ff;
+    border: none;
+    color: white;
+    border-radius: 6px;  
+  }
+  .survey_btns{
+    padding: 9px 23px;
+    cursor: pointer;
+    background-color: #5656ff;
+    border: none;
+    color: white;
+    border-radius: 6px;  
+  }
   .corona_btn{
     padding: 9px 23px;
     width: 100%;
@@ -175,3 +192,107 @@ table, td, th {
     color: white;
     border-radius: 6px;
   }
+
+
+
+  .createsurveyslider{
+    border: 1px solid black;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+  }
+  .createslider_main{
+    border: 1px solid black;
+    max-width: 891px;
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  .create_questionone{
+    border: 1px solid;
+    padding: 16px 50px;
+  }
+
+  .survey_inps{
+    border: none;
+    border-bottom: 2px solid black;
+    width: 89%;
+    outline: none;
+  }
+  .creating_survey{
+    width: 100%;
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+  .select_style{
+    padding: 5px 3px;
+    margin-left: 13px;
+  }
+
+
+  .list_slider{
+    border: 1px solid;
+    height: 600px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+
+
+  /* tabale */
+
+
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: black;
+    
+  }
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    background-color: black;
+}
+
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #4d4d4d;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
