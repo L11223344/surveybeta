@@ -19,7 +19,8 @@ app.use('/public/', express.static('./public'));
 app.get('/', (req, res) => {
     res.render('pages/index',
         {
-            success: false
+            success: false,
+            create: false
         }
     )
 })

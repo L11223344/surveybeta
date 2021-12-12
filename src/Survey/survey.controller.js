@@ -16,7 +16,8 @@ const createSurvey = async (req, res) => {
 }
 const viewQuestion = (req, res) => {
     res.render('pages/createsurvey', {
-        success: true
+        success: true,
+        create: false
     })
 }
 
@@ -61,11 +62,13 @@ const createaSurveyResponse = async (req, res) => {
 
 const seeLists = async (req, res) => {
     const surveys = await Survey.find({
-        surveytime: 'active'
+        surveytime: 'active',
+
     });
 
     res.render('pages/surveylist.ejs', {
         success: true,
+        create: true,
         surveys
     })
 }

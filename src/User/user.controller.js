@@ -35,7 +35,8 @@ const userLogin = async (req, res) => {
         var token = jwt.sign({ foo: requestEmail }, 'test');
         res.cookie('auth', token);
         res.render('pages/surveys.ejs', {
-            success: true
+            success: true,
+            create: false
         })
     }
 
