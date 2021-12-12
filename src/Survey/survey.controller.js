@@ -90,6 +90,28 @@ const creatingAnalysis = async (req, res) => {
     })
 }
 
+const deleteSurvey = async (req, res) => {
+    const id = req.params.id;
+    const deletedSurvey = await Survey.findOneAndDelete(id);
+    const surveys = await Survey.find({
+        surveytime: 'active'
+    });
+
+    res.redirect('/v1/survey/viewdelete')
+}
+
+
+const viewDelete = async (req, res) => {
+    const surveys = await Survey.find({
+        surveytime: 'active'
+    });
+
+    res.render('pages/surveylist.ejs', {
+        success: true,
+        surveys
+    })
+}
+
 module.exports = {
     createSurvey,
     viewQuestion,
@@ -98,5 +120,7 @@ module.exports = {
     createaSurveyResponse,
     seeLists,
     createAnalysis,
-    creatingAnalysis
+    creatingAnalysis,
+    deleteSurvey,
+    viewDelete
 }
