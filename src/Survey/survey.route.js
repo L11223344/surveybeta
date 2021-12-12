@@ -11,7 +11,7 @@ router.get('/viewquestion', viewQuestion);
 router.get('/viewformsurvey', viewFormSurvey);
 router.get('/specificsurvey/:id', seespecificSurvey);
 router.post('/surveyresponse', createaSurveyResponse);
-router.get('/createanalysis/:id', createAnalysis)
+router.get('/createanalysis', createAnalysis)
 router.get('/list', seeLists);
 router.post('/analysis', creatingAnalysis);
 router.get('/delete/:id', deleteSurvey);
