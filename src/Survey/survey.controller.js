@@ -16,7 +16,7 @@ const createSurvey = async (req, res) => {
 }
 const viewQuestion = (req, res) => {
     res.render('pages/createsurvey', {
-        success: false
+        success: true
     })
 }
 
