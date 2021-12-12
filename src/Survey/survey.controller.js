@@ -69,11 +69,34 @@ const seeLists = async (req, res) => {
         surveys
     })
 }
+
+
+
+
+const createAnalysis = async (req, res) => {
+    res.render('pages/createanalysis.ejs', {
+        success: true,
+    })
+}
+
+const creatingAnalysis = async (req, res) => {
+    const surveys = await Survey.find({
+        surveytime: 'active'
+    });
+
+    res.render('pages/surveylist.ejs', {
+        success: true,
+        surveys
+    })
+}
+
 module.exports = {
     createSurvey,
     viewQuestion,
     viewFormSurvey,
     seespecificSurvey,
     createaSurveyResponse,
-    seeLists
+    seeLists,
+    createAnalysis,
+    creatingAnalysis
 }
