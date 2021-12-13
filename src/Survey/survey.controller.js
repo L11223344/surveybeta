@@ -11,7 +11,8 @@ const createSurvey = async (req, res) => {
 
     res.render('pages/surveylist.ejs', {
         success: true,
-        surveys
+        surveys,
+        create: false,
     })
 }
 const viewQuestion = (req, res) => {
@@ -54,7 +55,8 @@ const createaSurveyResponse = async (req, res) => {
     console.log('response', response);
     res.render('pages/surveylist.ejs', {
         success: true,
-        surveys
+        surveys,
+        create: false
     })
 
 }
@@ -89,7 +91,8 @@ const creatingAnalysis = async (req, res) => {
 
     res.render('pages/surveylist.ejs', {
         success: true,
-        surveys
+        surveys,
+        create: false
     })
 }
 
@@ -111,7 +114,8 @@ const viewDelete = async (req, res) => {
 
     res.render('pages/surveylist.ejs', {
         success: true,
-        surveys
+        surveys,
+        create: false
     })
 }
 
